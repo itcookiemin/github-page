@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* ---------------
+   Header
+--------------- */
+h2 {
+  padding: 10px;
+}
+
+/* ---------------
+   MENU 
+--------------- */
+.menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-list {
+  display: block;
+  /* flex-direction: column; */
+  /* display: list-item; */
+  width: 260px;
+}
+
+/* 메뉴박스 */
+.menu-list > .menu-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 50%; */
+}
+
+/* 메뉴박스 - 메뉴버튼 */
+.menu-list > .menu-box > .menu-button {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: rgb(255, 233, 218);
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-decoration: none;
+  color: black;
+}
+
+/* .menu-list > .menu-box > .menu-button > a {
+  text-decoration: none;
+  color: black;
+} */
+
+.menu-list > .menu-box:hover > .menu-button {
+  background-color: rgb(200, 250, 202);
+  font-weight: bold;
+  cursor: pointer;
+  /* animation: load-arrow 1s linear infinite; */
+}
+
+/* 메튜박스 - 메뉴 arrow */
+.menu-list > .menu-box > .menu-arrow {
+  display: block;
+  width: 20px;
+  opacity: 0;
+}
+.menu-list > .menu-box:hover > .menu-arrow {
+  animation: load-arrow 1s linear infinite;
+}
+
+/*
+Loading Progress
+*/
+.menu-container > #load-progress {
+  display: block;
+  width: 300px;
+}
+
+/* Footer */
+.loading-footer {
+  display: block;
+  width: 100px;
+  height: 43px;
+  border-radius: 8px;
+  background-color: rgb(107 100 96);
+  text-align: center;
+  padding: 10px;
+  margin-left: 10px;
+  position: absolute;
+  top: calc(100vh - 60px);
+  color: white;
+}
+
+.loading-footer:hover {
+  background-color: white;
+  color: rgb(107 100 96);
+  border: 1px solid rgb(107 100 96);
+  cursor: pointer;
+}
+
+@keyframes load-arrow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

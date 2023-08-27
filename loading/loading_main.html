@@ -3,18 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MINS WEBPIE</title>
+    <title>LOADING LIST</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/inc_index.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <script src="./js/loading.js"></script>
   </head>
   <body>
-    <h2>MINS webpie page</h2>
-    <ul>
-      <li><a href="./loading-rect.html">rotate rect #1</a></li>
-      <li><a href="./loading-rect2.html">rotate rect #2</a></li>
-      <li><a href="./loading-gradient.html">rotate loading-gradient</a></li>
-      <li><a href="./loading-tire.html">rotate tire</a></li>
-      <li><a href="./loading-spinner.html">rotate spinner</a></li>
-    </ul>
+    <h2>Loading Progress</h2>
+    <div class="menu-container">
+      <div class="menu-list">
+        <div class="menu-box">
+          <div class="menu-button" onclick="MinsLoading.progress('tire');">
+            rotate tire
+          </div>
+          <div class="menu-arrow">▶</div>
+        </div>
+        <div class="menu-box">
+          <div class="menu-button" onclick="MinsLoading.progress('rect');">
+            rotate rect #1
+          </div>
+          <div class="menu-arrow">▶</div>
+        </div>
+        <div class="menu-box">
+          <div class="menu-button" onclick="MinsLoading.progress('rect2');">
+            rotate rect #2
+          </div>
+          <div class="menu-arrow">▶</div>
+        </div>
+        <div class="menu-box">
+          <div class="menu-button" onclick="MinsLoading.progress('gradient');">
+            rotate loading-gradient
+          </div>
+          <div class="menu-arrow">▶</div>
+        </div>
+        <div class="menu-box">
+          <div class="menu-button" onclick="MinsLoading.progress('spinner');">
+            rotate spinner
+          </div>
+          <div class="menu-arrow">▶</div>
+        </div>
+      </div>
+      <div id="load-progress"></div>
+    </div>
+    <footer>
+      <div class="loading-footer">HOME</div>
+    </footer>
   </body>
 </html>
