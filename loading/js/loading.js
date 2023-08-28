@@ -1,3 +1,8 @@
+/*
+ * TYPE : Javascript
+ * TITLE: MINS Loading Progress
+ */
+
 var MinsLoading = {
   /* Loading URL */
   progress: async (paramLoading) => {

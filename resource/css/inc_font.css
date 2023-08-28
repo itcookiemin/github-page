@@ -2,5 +2,5 @@
 
 @font-face {
   font-family: Noto;
-  src: url("../assets/font/NotoSansKR-Regular.otf") format("opentype"); /* <-- version 의미 안써도 된다. */
+  src: url("../font/NotoSansKR-Regular.otf") format("opentype"); /* <-- version 의미 안써도 된다. */
 }
