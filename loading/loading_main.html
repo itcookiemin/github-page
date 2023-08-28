@@ -6,10 +6,25 @@
     <title>LOADING LIST</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/loading.css" />
+    <link rel="stylesheet" href="./css/font.css" />
     <script src="./js/loading.js"></script>
   </head>
   <body>
-    <h2>Loading Progress</h2>
+    <!-- HEADER TITLE -->
+    <header class="loading-header">
+      <div
+        class="loading-home"
+        onclick="window.open('../index.html', '_parent')"
+      >
+        <img
+          src="../resource/img/ico-home.png"
+          alt="HOME"
+          class="loading-home-img"
+        />
+      </div>
+      <h2 class="loading-title">Loading Progress</h2>
+    </header>
+    <!-- MENU CONTAINER -->
     <div class="menu-container">
       <div class="menu-list">
         <div class="menu-box">
@@ -45,10 +60,9 @@
       </div>
       <div id="load-progress"></div>
     </div>
+    <!-- FOOTER -->
     <footer>
-      <div class="loading-footer" onclick="javascript:history.back();">
-        HOME
-      </div>
+      <div class="footer-copyright">@Crp #itcookiemin</div>
     </footer>
   </body>
 </html>

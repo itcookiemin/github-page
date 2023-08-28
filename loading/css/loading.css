@@ -1,16 +1,51 @@
 @charset "utf-8";
-
+:root {
+  --home: rgb(179, 179, 179);
+}
 /* ---------------
    Header
 --------------- */
-h2 {
+header {
+  width: 100%;
+  height: 60px; /* position fiexed시 뷰포트 기준으로 전환되어 width 100% 줘야 한다. */
+  background-color: var(--home);
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+}
+
+header > .loading-home {
+  background-color: var(--home);
   padding: 10px;
 }
 
-/* ---------------
-   MENU 
---------------- */
+header > .loading-home:hover {
+  background-color: white;
+  color: rgb(107 100 96);
+  /* border: 1px solid rgb(107 100 96); */
+  cursor: pointer;
+}
+
+.loading-home-img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Heaer (title) */
+header > .loading-title {
+  padding: 10px;
+  padding-right: 40px;
+  width: 100%;
+  text-align: center;
+  /* color: white; */
+}
+
+/* -------------------------
+            MENU 
+------------------------- */
 .menu-container {
+  position: static;
+  top: 60px;
   display: flex;
   flex-direction: row;
 }
@@ -40,6 +75,7 @@ h2 {
   width: 200px;
   text-decoration: none;
   color: black;
+  font-size: 14px;
 }
 
 /* .menu-list > .menu-box > .menu-button > a {
@@ -61,6 +97,7 @@ h2 {
   opacity: 0;
 }
 .menu-list > .menu-box:hover > .menu-arrow {
+  /* animation: load-arrow 1s linear infinite; */
   animation: load-arrow 1s linear infinite;
 }
 
@@ -72,26 +109,24 @@ Loading Progress
   width: 300px;
 }
 
-/* Footer */
-.loading-footer {
-  display: block;
-  width: 100px;
-  height: 43px;
-  border-radius: 8px;
-  background-color: rgb(107 100 96);
-  text-align: center;
-  padding: 10px;
-  margin-left: 10px;
+/* --------------------------------
+              FOOTER
+ ---------------------------------- */
+footer {
   position: absolute;
   top: calc(100vh - 60px);
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: bisque;
 }
 
-.loading-footer:hover {
-  background-color: white;
-  color: rgb(107 100 96);
-  border: 1px solid rgb(107 100 96);
-  cursor: pointer;
+footer .footer-copyright {
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 
 @keyframes load-arrow {
