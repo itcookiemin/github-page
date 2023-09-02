@@ -18,8 +18,10 @@ var MinsMain = {
     var _url_sub_main = "";
     if (movePage === "LOADING") {
       _url_sub_main = "./loading/loading_main.html";
+    } else if (movePage === "HAMBURGER") {
+      _url_sub_main = "./menu/menu-hamburger.html";
     } else {
-      _url_sub_main = "./jonwick/jonwick_main.html";
+      _url_sub_main = "";
     }
 
     //go sub main

@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+* {
+  padding: 0px;
+  margin: 0px; /* 수정 */
+  box-shadow: border-box;
+}
+
+:root {
+  --home: rgb(255 201 164);
+  --btn01: rgb(255, 233, 218);
+  --btn01-hover: rgb(200, 250, 202);
+  --footer: rgb(75 114 137);
+  --bgcolor-hambox: white;
+  --bgcolor-hambox-border: rgb(183 183 183);
+  --bgcolor-child-line: rgb(161 161 161);
+  --bgcolor-child-line2: white;
+}
+
+/* ---------------
+   Header
+--------------- */
+header {
+  width: 100%;
+  height: 60px; /* position fiexed시 뷰포트 기준으로 전환되어 width 100% 줘야 한다. */
+  background-color: var(--home);
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+}
+
+.hambuger-box {
+  background-color: var(--bgcolor-hambox);
+  border: 1px solid var(--bgcolor-hambox-border);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hambuger-box > span {
+  padding: 2.5px;
+  display: block;
+  width: 70%;
+  height: 2px;
+  border-radius: 10px;
+}
+
+.hambuger-box > span:nth-of-type(odd) {
+  background-color: var(--bgcolor-child-line);
+}
+
+.hambuger-box > span:nth-of-type(even) {
+  background-color: var(--bgcolor-child-line2);
+}
