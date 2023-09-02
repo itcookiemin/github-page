@@ -13,8 +13,8 @@
   --footer: rgb(75 114 137);
   --bgcolor-hambox: white;
   --bgcolor-hambox-border: rgb(183 183 183);
-  --bgcolor-child-line: rgb(161 161 161);
-  --bgcolor-child-line2: white;
+  --bgcolor-line-3: rgb(129 129 129);
+  /* --bgcolor-line-2: white; */
 }
 
 /* ---------------
@@ -29,16 +29,26 @@ header {
   flex-direction: row;
 }
 
+/* Heaer (title) */
+header > .loading-title {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
 .hambuger-box {
-  background-color: var(--bgcolor-hambox);
-  border: 1px solid var(--bgcolor-hambox-border);
-  width: 50px;
-  height: 50px;
+  /* background-color: var(--bgcolor-hambox); */
+  /* border: 1px solid var(--bgcolor-hambox-border); */
+  background-color: var(--home);
+  width: 60px;
+  height: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: absolute;
+  top: 0px;
 }
 
 .hambuger-box > span {
@@ -50,9 +60,10 @@ header {
 }
 
 .hambuger-box > span:nth-of-type(odd) {
-  background-color: var(--bgcolor-child-line);
+  background-color: var(--bgcolor-line-3);
 }
 
 .hambuger-box > span:nth-of-type(even) {
-  background-color: var(--bgcolor-child-line2);
+  /* background-color: var(--bgcolor-line-2); */
+  background-color: var(--home);
 }
