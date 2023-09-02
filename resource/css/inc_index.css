@@ -2,7 +2,8 @@
 
 :root {
   --bgcolor-header: rgb(75 114 137);
-  --bgcolor-footer: rgb(117 154 197);
+  /* --bgcolor-footer: rgb(117 154 197); */
+  --bgcolor-footer: rgb(145 145 145);
   --color-font-01: white;
 }
 

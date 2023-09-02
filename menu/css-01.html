@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>햄버거메뉴</title>
+<style>
+  * {
+    padding:0px;
+    margin:0px; /* 수정 */
+    box-shadow: border-box;
+  }
+
+  :root {
+    --bgcolor-hambox : white;
+    --bgcolor-hambox-border :rgb(183 183 183);
+    --bgcolor-child-line : rgb(161 161 161);
+    --bgcolor-child-line2 : white;
+  }
+
+  .hambuger-box {
+    background-color: var(--bgcolor-hambox);
+    border: 1px solid var(--bgcolor-hambox-border);
+    width:50px;
+    height:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .hambuger-box > div {
+    padding:2.5px;
+    display: block;
+    width:70%;
+    height: 2px;
+    border-radius: 10px;
+  }
+
+  .hambuger-box > div:nth-of-type(odd) {
+    background-color: var(--bgcolor-child-line);
+  }
+
+  .hambuger-box > div:nth-of-type(even) {
+    background-color: var(--bgcolor-child-line2);
+  }
+
+</style>
+
+</head>
+<body>
+  <div class="hambuger-box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

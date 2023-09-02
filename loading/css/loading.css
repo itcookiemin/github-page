@@ -1,9 +1,10 @@
 @charset "utf-8";
 :root {
-  --home: rgb(221 192 172);
+  --home: rgb(255 201 164);
   --btn01: rgb(255, 233, 218);
   --btn01-hover: rgb(200, 250, 202);
-  --footer: rgb(117 154 197);
+  --footer: rgb(75 114 137);
+  /* --footer: rgb(145 145 145); */
 }
 
 /* ---------------
@@ -37,7 +38,6 @@ header > .loading-home:hover {
 /* Heaer (title) */
 header > .loading-title {
   padding: 10px;
-  padding-right: 40px;
   width: 100%;
   text-align: center;
   /* color: white; */
