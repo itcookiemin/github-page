@@ -1,4 +1,4 @@
-var MinsMain = {
+const MinsMain = {
   /* Loading URL */
   goHome: (moveType) => {
     //
@@ -28,3 +28,4 @@ var MinsMain = {
     window.location.href = _url_sub_main;
   },
 };
+

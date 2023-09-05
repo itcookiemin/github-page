@@ -8,19 +8,39 @@
     <link rel="stylesheet" href="./resource/css/inc_index.css" />
     <link rel="stylesheet" href="./resource/css/inc_font.css" />
     <script src="./resource/js/inc_main.js"></script>
+    <script src="./resource/js/inc_writing.js"></script>
+    <!-- event 등록 -->
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <h2>MINS webpie</h2>
     </header>
-    <ul class="index-main">
-      <li onclick="MinsMain.goSubMain('LOADING')">LOADING List</li>
-      <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
-      <!-- <li onclick="MinsMain.goSubMain('JONWICK')">JONWICK</li> -->
-    </ul>
+    <!-- MAIN -->
+    <main>
+      <ul class="index-main">
+        <li onclick="MinsMain.goSubMain('LOADING')">LOADING Animation</li>
+        <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
+        <!-- <li onclick="MinsMain.goSubMain('JONWICK')">JONWICK</li> -->
+      </ul>
+      <div class="arrow-recent">&gt;</div>
+      <aside id="aside-menu-recent">
+        <div>
+          <div id="write_no1" onclick="GoodArticle.writeBox('no1')">인생의</div>
+          <div id="write_no2" onclick="GoodArticle.writeBox('no2')">아무것</div>
+          <div id="write_no3" onclick="GoodArticle.writeBox('no3')">기다림</div>
+        </div>
+      </aside>
+      <article id="article-main"></article>
+    </main>
     <!-- FOOTER -->
     <footer>
       <div class="footer-copyright">@Copypright #itcookiemin</div>
     </footer>
+
+    <!-- <script>
+      window.attachEvent &&
+        window.addEventListener("load", GoodArticle.writeEvent);
+    </script> -->
   </body>
 </html>
