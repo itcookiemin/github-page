@@ -27,5 +27,18 @@ const MinsMain = {
     //go sub main
     window.location.href = _url_sub_main;
   },
+  /* open subMenu */
+  // isOpenAsideArticle: () => {
+  //   return false;
+  // },
+  // openAsideArticle: () => {
+  //   let isOpen = MinsMain.isOpenAsideArticle;
+  //   if (!isOpen) {
+  //     $("#article-main").css("display", "inline");
+  //     $("#article-main").css("width", "calc(100% - 72px)");
+  //   } else {
+  //   }
+  //   //
+  //   MinsMain.isOpenAsideArticle = !MinsMain.isOpenAsideArticle;
+  // },
 };
-

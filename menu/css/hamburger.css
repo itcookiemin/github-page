@@ -85,18 +85,17 @@ nav > .hambuger-box:hover > span:nth-of-type(odd) {
 #id-left-menu {
   display: block;
   position: absolute;
-  width : 300px;
+  width: 300px;
   height: calc(100vh - 60px);
   left: -300px;
   top: 60px;
-  background-color: bisque; 
+  background-color: bisque;
 }
-
 
 .move {
   /* display: block; */
   /* display: relative; */
   /* transform: translateX(300px) 1s linear infinite; */
-  transform: translateX(300px) ;
-  background-color: rgb(233, 148, 44); 
+  transform: translateX(300px);
+  background-color: rgb(233, 148, 44);
 }

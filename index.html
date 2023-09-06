@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./resource/css/inc_font.css" />
     <script src="./resource/js/inc_main.js"></script>
     <script src="./resource/js/inc_writing.js"></script>
-    <!-- event 등록 -->
+    <script src="./resource/js/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -18,14 +18,23 @@
     </header>
     <!-- MAIN -->
     <main>
-      <ul class="index-main">
-        <li onclick="MinsMain.goSubMain('LOADING')">LOADING Animation</li>
-        <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
-        <!-- <li onclick="MinsMain.goSubMain('JONWICK')">JONWICK</li> -->
-      </ul>
-      <div class="arrow-recent">&gt;</div>
-      <aside id="aside-menu-recent">
+      <section class="menu-study">
+        <div>Good Jobs</div>
+        <ul class="index-main">
+          <li onclick="MinsMain.goSubMain('LOADING')">LOADING Animation</li>
+          <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
+        </ul>
+      </section>
+      <div
+        id="id-arrow-recent"
+        class="arrow-recent"
+        onclick="MinsMain.openAsideArticle()"
+      >
+        &gt;
+      </div>
+      <aside id="id-aside-menu-recent">
         <div>
+          <span>Light</span>
           <div id="write_no1" onclick="GoodArticle.writeBox('no1')">인생의</div>
           <div id="write_no2" onclick="GoodArticle.writeBox('no2')">아무것</div>
           <div id="write_no3" onclick="GoodArticle.writeBox('no3')">기다림</div>

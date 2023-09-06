@@ -10,7 +10,7 @@ const GoodArticle = {
   // },
 
   //write in BOX
-  writeBox : (param_write_no) => {
+  writeBox: (param_write_no) => {
     let temp_writing_no;
     if (param_write_no === "no1") {
       temp_writing_no = GoodArticle.writing_no1;
@@ -21,11 +21,10 @@ const GoodArticle = {
     }
 
     //Display Write Box
-    document.getElementById("article-main").innerText = temp_writing_no;
-    
+    document.getElementById("article-main").innerHTML = temp_writing_no;
   },
 
-  writing_no1 : `인생의 절반쯤에 꼭 생각해 볼 것들
+  writing_no1: `<pre><b>인생의 절반쯤에 꼭 생각해 볼 것들</b>
 
 가끔씩 피식 혼자서 웃어보곤 합니다
 지나온 추억들을 떠올려 보는 시간
@@ -63,8 +62,8 @@ const GoodArticle = {
 지금 이 시간부터라도
 좀 더 내 삶에 진지하게
 임해야겠습니다
-`,
-  writing_no2 : `아무것도 아닌 것이
+</pre>`,
+  writing_no2: `<pre><b>아무것도 아닌 것이</b>
 
 아무것도 아닌 것이
 아무것인게 인생이더라.
@@ -75,13 +74,14 @@ const GoodArticle = {
 
 "여행을 생활처럼 하고
 생활을 여행처럼 해봐"
-`,
-  writing_no3 : `기다림의 여행
+</pre>`,
+  writing_no3: `<pre><b>기다림의 여행</b>
 
 자기자신과 함께 시간을 보내고 싶으면
-당연히 혼자 떠나야 한다. 그리고 목적지 빼곤
+당연히 혼자 떠나야 한다. 
+그리고 목적지 빼곤
 아는 곳이 없어야 한다.
-`
+</pre>`,
 };
 
 // window load event
