@@ -12,6 +12,7 @@
   --color-font-footer: rgb(70, 70, 70);
   --color-font-01: white;
   --color-font-02: rgb(70, 70, 70);
+  --main-height: calc(100vh - 110px);
 }
 
 /* ---------------
@@ -36,9 +37,10 @@ header > h2 {
 
 main {
   width: 100%;
-  height: calc(100vh - 120px);
+  height: var(--main-height);
   background: linear-gradient(var(--bgcolor-header), var(--bgcolor-footer));
   overflow-y: auto;
+  padding-top: 0px;
 }
 /* ---------------
    MENU > study
@@ -49,7 +51,7 @@ main {
   margin-top: 10px;
   background-color: var(--bgcolor-edge-01);
   border-radius: 10px;
-  border: 1px solid #fff;
+  border: 1px solid darkslategray;
 }
 
 .menu-study > div {
@@ -139,25 +141,49 @@ main {
  ---------------------------------- */
 footer {
   position: absolute;
-  top: calc(100vh - 60px);
+  top: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 60px;
+  height: 50px;
   background-color: var(--bgcolor-footer);
 }
 
-footer .footer-copyright {
+footer nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background-color: white;
   width: 100%;
-  display: block;
-  text-align: center;
-  color: var(--color-font-footer);
 }
 
-@keyframes modifyArrow {
-  50% {
-    transform: translate(16px, -50%);
-    /* 중복으로 인해 대체 되니까 -50%를 유지하면서 16px 이동 반복 */
-  }
+footer nav div {
+  text-align: center;
+  width: 25%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+footer nav div:hover {
+  background-color: var(--bgcolor-header);
+  color: var(--color-font-01);
+}
+/* footer .footer-copyright {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  color: var(--color-font-footer);
+} */
+
+/* footer .footer-copyright span {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+} */
