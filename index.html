@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MINS WEBPIE</title>
+    <title>MINS Cookie Story</title>
     <link rel="stylesheet" href="./resource/css/inc_reset.css" />
     <link rel="stylesheet" href="./resource/css/inc_index.css" />
     <link rel="stylesheet" href="./resource/css/inc_font.css" />
@@ -14,7 +14,7 @@
   <body>
     <!-- HEADER -->
     <header>
-      <h2>MINS webpie</h2>
+      <h2>MINS Cookie Story</h2>
     </header>
     <!-- MAIN -->
     <main>
@@ -25,31 +25,51 @@
           <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
         </ul>
       </section>
-      <div
-        id="id-arrow-recent"
-        class="arrow-recent"
-        onclick="MinsMain.openAsideArticle()"
-      >
-        &gt;
-      </div>
-      <aside id="id-aside-menu-recent">
-        <div>
-          <span>Light</span>
-          <div id="write_no1" onclick="GoodArticle.writeBox('no1')">인생의</div>
-          <div id="write_no2" onclick="GoodArticle.writeBox('no2')">아무것</div>
-          <div id="write_no3" onclick="GoodArticle.writeBox('no3')">기다림</div>
+      <section class="menu-section">
+        <div class="title">즐겨찾는 쿠키</div>
+        <div class="list">
+          <img src="./cookie/assets/img_sumnail/sn-bread-3.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-1.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-5.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-bread-4.jpg" />
         </div>
-      </aside>
-      <article id="article-main"></article>
+      </section>
+      <section class="menu-section">
+        <div class="title">사랑에 빠진 Bread</div>
+        <div class="list">
+          <img src="./cookie/assets/img_sumnail/sn-bread-1.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-bread-2.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-bread-3.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-bread-4.jpg" />
+        </div>
+      </section>
+      <section class="menu-section">
+        <div class="title">행복에 빠진 Cake</div>
+        <div class="list">
+          <img src="./cookie/assets/img_sumnail/sn-cake-1.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-2.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-3.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-4.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-5.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-6.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cake-7.jpg" />
+        </div>
+      </section>
+      <section class="menu-section">
+        <div class="title">기쁨에 빠진 Cooking</div>
+        <div class="list">
+          <img src="./cookie/assets/img_sumnail/sn-cooking-1.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-2.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-3.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-4.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-5.jpg" />
+          <img src="./cookie/assets/img_sumnail/sn-cooking-6.jpg" />
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer>
       <div class="footer-copyright">@Copypright #itcookiemin</div>
     </footer>
-
-    <!-- <script>
-      window.attachEvent &&
-        window.addEventListener("load", GoodArticle.writeEvent);
-    </script> -->
   </body>
 </html>
