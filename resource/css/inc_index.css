@@ -147,3 +147,59 @@ footer nav div:hover {
   background-color: var(--bgcolor-header);
   color: var(--color-font-01);
 }
+
+footer nav .btn-menu {
+  display: flex;
+  justify-content: cneter;
+  align-items: center;
+}
+
+footer nav .btn-menu .btn-menu-hambuger {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 16px;
+}
+
+footer nav .btn-menu .btn-menu-hambuger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+}
+
+footer nav .btn-menu span:nth-of-type(1) {
+  position: absolute;
+  top: 0px;
+}
+footer nav .btn-menu span:nth-of-type(3) {
+  position: absolute;
+  bottom: 0px;
+}
+
+/* 뷰포트의 가로너비가 1025px 이상인 경우 적용 : 데스크탑 환경 */
+/* @media screen and (min-width: 1025px){ .. }
+
+/* 뷰포트의 가로너비가 769px 이상 1024px 이하 : 태블릿 환경 */
+/* @media screen and (min-width: 769px) and (max-width: 1024){ .. } */
+
+/* 뷰포트의 가로너비가 768px 이하인 경우 적용 : 모바일 환경 */
+@media screen and (min-width: 768px) {
+  .menu-study > .index-main > span {
+    width: 45%;
+  }
+}
+/* 
+/* 장치가 가로 방향인 경우 적용 */
+@media (orientation: landscape) {
+  .menu-study > .index-main > span {
+    width: 30%;
+  }
+}
+
+/* 장치가 세로 방향인 경우 적용 */
+@media (orientation: portrait) {
+  .menu-study > .index-main > span {
+    width: 45%;
+  }
+}
