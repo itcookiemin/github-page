@@ -8,10 +8,11 @@
   --color-font-01: black;
   --color-font-02: rgb(70 70 70);
   --main-height: calc(100vh - 170px);
+  --bgcolor-btn-hover-01: bisque;
 }
 
 /* ---------------
-   HEADER
+    HEADER
    --------------- */
 header {
   padding: 10px;
@@ -31,8 +32,23 @@ header .header-edge {
     width: 70%;
     text-align: left;
   }
+  /* HEADER LEFT */
   .h-robotani {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  /* HEADER RIGHT */
+  .h-robotani div {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .h-robotani div img {
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  .h-robotani div img:hover {
+    background-color: bisque;
   }
 }
 
@@ -43,8 +59,10 @@ header span {
   font-size: 15px;
 }
 
+/* HEADER title */
 header span:nth-of-type(1) {
   font-size: 24px;
+  font-weight: bold;
 }
 
 main {
@@ -56,8 +74,8 @@ main {
 }
 
 /* ---------------
-   MENU > section
-   --------------- */
+    MENU > section
+  --------------- */
 .menu-section {
   position: relative;
   margin: 10px;
@@ -66,19 +84,6 @@ main {
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid darkslategray;
-}
-
-.menu-study:nth-of-type(1) {
-  background-color: rgb(255 253 210);
-}
-.menu-study:nth-of-type(2) {
-  background-color: rgb(255 251 226);
-}
-.menu-study:nth-of-type(3) {
-  background-color: rgb(255 223 211);
-}
-.menu-study:nth-of-type(4) {
-  background-color: rgb(255 228 253);
 }
 
 .menu-section > .title {
@@ -92,19 +97,17 @@ main {
 
 .menu-section > .list {
   display: flex;
-  justify-content: flex-start;
-  overflow-y: none;
+  overflow-y: hidden;
   overflow-x: auto;
 }
 
 .menu-section > .list > img {
-  width: 50%;
+  width: 120px;
+  height: 120px;
   border-radius: 6px;
-  /* padding: 5px; */
   margin: 10px 10px 10px 0px;
-  text-decoration: none;
-  color: black;
-  font-size: 14px;
+  object-fit: cover;
+  object-position: left; /* center */
   cursor: pointer;
 }
 
@@ -143,6 +146,35 @@ footer nav div {
   align-items: center;
 }
 footer nav div:hover {
-  background-color: var(--bgcolor-header);
+  background-color: var(--bgcolor-btn-hover-01);
   color: var(--color-font-01);
+}
+
+footer nav .btn-menu {
+  display: flex;
+  justify-content: cneter;
+  align-items: center;
+}
+
+footer nav .btn-menu .btn-menu-hambuger {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 16px;
+}
+
+footer nav .btn-menu .btn-menu-hambuger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+}
+
+footer nav .btn-menu span:nth-of-type(1) {
+  position: absolute;
+  top: 0px;
+}
+footer nav .btn-menu span:nth-of-type(3) {
+  position: absolute;
+  bottom: 0px;
 }
