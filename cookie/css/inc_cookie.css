@@ -1,16 +1,11 @@
 @charset "utf-8";
 
 :root {
-  --bgcolor-header: rgb(75 114 137);
-  --bgcolor-footer: rgb(190, 211, 235);
-  /* --bgcolor-footer: rgb(145 145 145); */
-  --bgcolor-article: rgb(223 223 223);
-  /* --bgcolor-edge-01: rgb(233 233 233); */
-  --bgcolor-edge-01: rgba(134, 161, 177, 0.658);
-  --bgcolor-list-01: rgb(255 207 174);
-  --bgcolor-list-01-hover: rgb(132, 182, 238);
+  --bgcolor-header: rgb(255 251 226);
+  --bgcolor-footer: rgb(255, 255, 255);
+  --bgcolor-edge-01: rgb(255 235 175 / 53%);
   --color-font-footer: rgb(70, 70, 70);
-  --color-font-01: white;
+  --color-font-01: black;
   --color-font-02: rgb(70, 70, 70);
   --main-height: calc(100vh - 170px);
 }
