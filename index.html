@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./resource/css/inc_index.css" />
     <link rel="stylesheet" href="./resource/css/inc_font.css" />
     <script src="./resource/js/inc_main.js"></script>
-    <script src="./resource/js/inc_writing.js"></script>
     <script src="./resource/js/jquery-3.7.1.min.js"></script>
   </head>
   <body>
@@ -17,7 +16,7 @@
       <!-- <h2>MINS Cookie Story</h2> -->
       <div class="header-edge">
         <div class="h-summary">
-          <span>MINS Cookie Stroy</span><br />
+          <span>MINS Stroy</span><br />
           <span>아침에 빵 먹고 웃고</span><br />
           <span>오후에 케이크 먹고 더 웃고</span><br />
           <span>저녁에 요리는 영양!!</span>
@@ -29,53 +28,17 @@
     <main>
       <section class="menu-study">
         <div>Good Jobs</div>
-        <ul class="index-main">
+        <div class="index-main">
+          <span onclick="MinsMain.goSubMain('LOADING')">LOADING Animation</span>
+          <span onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</span>
+          <span onclick="MinsMain.goSubMain('COOKIE')">MINS COOKIE</span>
+        </div>
+        <!-- <ul class="index-main">
           <li onclick="MinsMain.goSubMain('LOADING')">LOADING Animation</li>
           <li onclick="MinsMain.goSubMain('HAMBURGER')">MENU Hamburger</li>
-        </ul>
+          <li onclick="MinsMain.goSubMain('Cookie Strory')">MENU Hamburger</li>
+        </ul> -->
       </section>
-      <section class="menu-section">
-        <div class="title">즐겨찾는 쿠키</div>
-        <div class="list">
-          <img src="./cookie/assets/img_sumnail/sn-bread-3.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-1.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-5.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-bread-4.jpg" />
-        </div>
-      </section>
-      <section class="menu-section">
-        <div class="title">사랑에 빠진 Bread</div>
-        <div class="list">
-          <img src="./cookie/assets/img_sumnail/sn-bread-1.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-bread-2.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-bread-3.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-bread-4.jpg" />
-        </div>
-      </section>
-      <section class="menu-section">
-        <div class="title">행복에 빠진 Cake</div>
-        <div class="list">
-          <img src="./cookie/assets/img_sumnail/sn-cake-1.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-2.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-3.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-4.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-5.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-6.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cake-7.jpg" />
-        </div>
-      </section>
-      <section class="menu-section">
-        <div class="title">기쁨에 빠진 Cooking</div>
-        <div class="list">
-          <img src="./cookie/assets/img_sumnail/sn-cooking-1.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-2.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-3.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-4.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-5.jpg" />
-          <img src="./cookie/assets/img_sumnail/sn-cooking-6.jpg" />
-        </div>
-      </section>
-    </main>
     <!-- FOOTER -->
     <footer>
       <nav>

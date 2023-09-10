@@ -16,7 +16,7 @@
 }
 
 /* ---------------
-    HEADER
+   HEADER
    --------------- */
 header {
   padding: 10px;
@@ -61,50 +61,54 @@ main {
 }
 
 /* ---------------
-    MENU > study
+   MENU > section
    --------------- */
-.menu-study {
+.menu-section {
   position: relative;
   margin: 10px;
-  margin-top: 10px;
   background-color: var(--bgcolor-edge-01);
-  border-radius: 10px;
+  border-radius: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
   border: 1px solid darkslategray;
 }
+.menu-study:nth-of-type(1) {
+  background-color: rgba(134, 161, 177, 0.658);
+  .title {
+    color: white;
+  }
+}
 
-.menu-study > div {
+.menu-section > .title {
   position: relative;
   padding-top: 5px;
-  margin-left: 14px;
+  padding-left: 0px;
   font-size: 18px;
   /* font-weight: bold; */
   color: var(--color-font-01);
 }
 
-.menu-study > .index-main {
+.menu-section > .list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-y: none;
+  overflow-x: auto;
 }
 
-.menu-study > .index-main > span {
-  width: 30%;
+.menu-section > .list > img {
+  width: 50%;
   border-radius: 6px;
-  background-color: var(--bgcolor-list-01);
-  padding: 10px;
-  margin: 10px;
+  /* padding: 5px; */
+  margin: 10px 10px 10px 0px;
+  text-decoration: none;
   color: black;
   font-size: 14px;
-}
-
-.menu-study > .index-main > span:hover {
-  background-color: var(--bgcolor-list-01-hover);
-  font-weight: bold;
   cursor: pointer;
 }
 
-/* -------------
-    FOOTER
- --------------- */
+/* --------------------------------
+              FOOTER
+ ---------------------------------- */
 footer {
   position: absolute;
   top: calc(100vh - 50px);
@@ -136,7 +140,6 @@ footer nav div {
   justify-content: center;
   align-items: center;
 }
-
 footer nav div:hover {
   background-color: var(--bgcolor-header);
   color: var(--color-font-01);
