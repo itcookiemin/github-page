@@ -2,17 +2,16 @@
 
 :root {
   --bgcolor-header: rgb(75 114 137);
-  --bgcolor-footer: rgb(190, 211, 235);
-  /* --bgcolor-footer: rgb(145 145 145); */
+  --bgcolor-footer: rgb(9 26 47);
   --bgcolor-article: rgb(223 223 223);
-  /* --bgcolor-edge-01: rgb(233 233 233); */
-  --bgcolor-edge-01: rgba(134, 161, 177, 0.658);
+  --bgcolor-edge-01: rgb(134 161 177 / 40%);
   --bgcolor-list-01: rgb(182 231 231 / 68%);
   --bgcolor-list-01-hover: rgb(255, 255, 255);
   --color-font-footer: rgb(70, 70, 70);
   --color-font-01: rgb(255, 255, 255);
   --color-font-02: rgb(70, 70, 70);
   --main-height: calc(100vh - 170px);
+  --footer-height-copyright: 50px;
 }
 
 body {
@@ -30,7 +29,7 @@ header {
   /* justify-self: center;
   align-items: center; */
   width: 100%;
-  height: 120px;
+  height: 130px;
   /* background-color: var(--bgcolor-header); */
 }
 
@@ -61,7 +60,6 @@ header span:nth-of-type(1) {
 main {
   width: 100%;
   height: var(--main-height);
-  /* background: linear-gradient(var(--bgcolor-header), var(--bgcolor-footer)); */
   overflow-y: auto;
   padding-top: 0px;
 }
@@ -72,7 +70,8 @@ main {
 .menu-study {
   position: relative;
   margin: 10px;
-  margin-top: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   background-color: var(--bgcolor-edge-01);
   border-radius: 10px;
   border: 1px solid darkslategray;
@@ -83,7 +82,6 @@ main {
   padding-top: 5px;
   margin-left: 14px;
   font-size: 18px;
-  /* font-weight: bold; */
   color: var(--color-font-01);
 }
 
@@ -93,11 +91,13 @@ main {
 }
 
 .menu-study > .index-main > span {
-  width: 30%;
+  display: inline;
+  /* width: 30%; */
   border-radius: 6px;
   background-color: var(--bgcolor-list-01);
   padding: 10px;
   margin: 10px;
+  margin-left: 0px;
   color: black;
   font-size: 14px;
 }
@@ -106,6 +106,7 @@ main {
   background-color: var(--bgcolor-list-01-hover);
   font-weight: bold;
   cursor: pointer;
+  animation: menu_ani_right 0.5s 1 linear;
 }
 
 /* -------------
@@ -119,62 +120,25 @@ footer {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 50px;
   background-color: var(--bgcolor-footer);
-}
-
-footer nav {
   height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  background-color: white;
-  width: 100%;
 }
 
-footer nav div {
-  text-align: center;
-  width: 25%;
-  height: 100%;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer .footer-copyright {
+  display: inline;
+  color: white;
 }
 
-footer nav div:hover {
-  background-color: var(--bgcolor-header);
-  color: var(--color-font-01);
-}
-
-footer nav .btn-menu {
-  display: flex;
-  justify-content: cneter;
-  align-items: center;
-}
-
-footer nav .btn-menu .btn-menu-hambuger {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 16px;
-}
-
-footer nav .btn-menu .btn-menu-hambuger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: black;
-}
-
-footer nav .btn-menu span:nth-of-type(1) {
-  position: absolute;
-  top: 0px;
-}
-footer nav .btn-menu span:nth-of-type(3) {
-  position: absolute;
-  bottom: 0px;
+/* -------------
+    animation
+   ------------- */
+@keyframes menu_ani_right {
+  0% {
+    padding-right: 10px;
+  }
+  100% {
+    padding-right: 20px;
+  }
 }
 
 /* 뷰포트의 가로너비가 1025px 이상인 경우 적용 : 데스크탑 환경 */
@@ -184,22 +148,22 @@ footer nav .btn-menu span:nth-of-type(3) {
 /* @media screen and (min-width: 769px) and (max-width: 1024){ .. } */
 
 /* 뷰포트의 가로너비가 768px 이하인 경우 적용 : 모바일 환경 */
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .menu-study > .index-main > span {
     width: 45%;
   }
-}
-/* 
+} */
+
 /* 장치가 가로 방향인 경우 적용 */
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
   .menu-study > .index-main > span {
     width: 30%;
   }
-}
+} */
 
 /* 장치가 세로 방향인 경우 적용 */
-@media (orientation: portrait) {
+/* @media (orientation: portrait) {
   .menu-study > .index-main > span {
     width: 45%;
   }
-}
+} */
