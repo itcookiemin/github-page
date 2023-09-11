@@ -17,6 +17,8 @@ var MinsLoading = {
       returnUrl = "./loading-gradient.html";
     } else if (paramLoading === "spinner") {
       returnUrl = "./loading-spinner.html";
+    } else if (paramLoading === "spinner") {
+      returnUrl = "./loading-robot.html";
     }
 
     document.getElementById("load-progress").innerHTML =
