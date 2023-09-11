@@ -106,7 +106,7 @@ main {
   background-color: var(--bgcolor-list-01-hover);
   font-weight: bold;
   cursor: pointer;
-  animation: menu_ani_right 0.5s 1 linear;
+  /* animation: menu_ani_right 0.5s 1 linear; */
 }
 
 /* -------------
