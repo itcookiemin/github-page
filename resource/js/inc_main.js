@@ -44,11 +44,3 @@ const MinsMain = {
   //   MinsMain.isOpenAsideArticle = !MinsMain.isOpenAsideArticle;
   // },
 };
-
-function index_init() {
-  if (document.documentElement.requestFullscreen) {
-    document.documentElement.requestFullscreen();
-  }
-}
-
-index_init();

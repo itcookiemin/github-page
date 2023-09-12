@@ -98,7 +98,7 @@ main {
 .menu-section > .list {
   display: flex;
   overflow-y: hidden;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .menu-section > .list > img {
@@ -134,6 +134,7 @@ footer nav {
   color: black;
   background-color: white;
   width: 100%;
+  border-top: 1px solid silver;
 }
 
 footer nav div {
@@ -144,6 +145,9 @@ footer nav div {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid rgb(255, 247, 209);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
 }
 footer nav div:hover {
   background-color: var(--bgcolor-btn-hover-01);
@@ -179,29 +183,43 @@ footer nav .btn-menu span:nth-of-type(3) {
   bottom: 0px;
 }
 
-/* 뷰포트의 가로너비가 1025px 이상인 경우 적용 : 데스크탑 환경 */
-/* @media screen and (min-width: 1025px){ .. }
-
-/* 뷰포트의 가로너비가 769px 이상 1024px 이하 : 태블릿 환경 */
-/* @media screen and (min-width: 769px) and (max-width: 1024){ .. } */
-
-/* 뷰포트의 가로너비가 768px 이하인 경우 적용 : 모바일 환경 */
-@media screen and (min-width: 768px) {
-  .menu-study > .index-main > span {
-    width: 45%;
-  }
-}
-/* 
-/* 장치가 가로 방향인 경우 적용 */
-@media (orientation: landscape) {
-  .menu-study > .index-main > span {
-    width: 30%;
-  }
+footer nav .nav_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* 장치가 세로 방향인 경우 적용 */
-@media (orientation: portrait) {
-  .menu-study > .index-main > span {
-    width: 45%;
+/* footer nav center */
+footer nav .nav_center .nav_center_1 {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: 1px solid silver;
+  position: absolute;
+}
+
+/* footer nav center */
+.nav_center_2 {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: burlywood;
+  position: absolute;
+  animation: ani_nav_center 2.5s infinite linear;
+}
+
+@keyframes ani_nav_center {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
