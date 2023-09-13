@@ -34,18 +34,58 @@
     <!-- MAIN -->
     <main>
       <section class="menu-section">
-        <div class="title">즐겨찾는 쿠키</div>
+        <div class="title">즐겨찾는 사랑이</div>
         <div class="list">
-          <img src="./assets/img_sumnail/sn-bread-3.jpg" />
-          <img src="./assets/img_sumnail/sn-cake-1.jpg" />
-          <img src="./assets/img_sumnail/sn-cooking-5.jpg" />
-          <img src="./assets/img_sumnail/sn-bread-4.jpg" />
-          <img src="./assets/img_sumnail/sn-cooking-3.jpg" />
+          <div class="img-layout">
+            <img src="./assets/img_sumnail/sn-bread-3.jpg" />
+            <div class="img-title">생크림스콘</div>
+            <div class="img-desc">
+              <span class="img-price">90%</span>
+              <span class="img-shortdesc">촉촉맛나</span>
+            </div>
+            <div class="img-delivery">아침배송</div>
+          </div>
+          <div class="img-layout">
+            <img src="./assets/img_sumnail/sn-cake-1.jpg" />
+            <div class="img-title">레인보우 타르트</div>
+            <div class="img-desc">
+              <span class="img-price">100%</span>
+              <span class="img-shortdesc">감성 무지개</span>
+            </div>
+            <div class="img-delivery">새벽배송</div>
+          </div>
+          <div class="img-layout">
+            <img src="./assets/img_sumnail/sn-cooking-5.jpg" />
+            <div class="img-title">요거트감자</div>
+            <div class="img-desc">
+              <span class="img-price">80%</span>
+              <span class="img-shortdesc">역시 탄수감성</span>
+            </div>
+            <div class="img-delivery">점심배송</div>
+          </div>
+          <div class="img-layout">
+            <img src="./assets/img_sumnail/sn-bread-4.jpg" />
+            <div class="img-title">통밀 크림치즈 브레드</div>
+            <div class="img-desc">
+              <span class="img-price">85%</span>
+              <span class="img-shortdesc">다요트 최고</span>
+            </div>
+            <div class="img-delivery">3시배송</div>
+          </div>
+          <div class="img-layout">
+            <img src="./assets/img_sumnail/sn-cooking-3.jpg" />
+            <div class="img-title">오븐 안심 치킨</div>
+            <div class="img-desc">
+              <span class="img-price">100%</span>
+              <span class="img-shortdesc">지친 휴식 최고</span>
+            </div>
+            <div class="img-delivery">12시배송</div>
+          </div>
         </div>
       </section>
       <section class="menu-section">
         <div class="title">사랑에 빠진 Bread</div>
-        <div class="list">
+        <div class="list2">
           <img src="./assets/img_sumnail/sn-bread-1.jpg" />
           <img src="./assets/img_sumnail/sn-bread-2.jpg" />
           <img src="./assets/img_sumnail/sn-bread-3.jpg" />
@@ -54,7 +94,7 @@
       </section>
       <section class="menu-section">
         <div class="title">행복에 빠진 Cake</div>
-        <div class="list">
+        <div class="list2">
           <img src="./assets/img_sumnail/sn-cake-1.jpg" />
           <img src="./assets/img_sumnail/sn-cake-2.jpg" />
           <img src="./assets/img_sumnail/sn-cake-3.jpg" />
@@ -66,7 +106,7 @@
       </section>
       <section class="menu-section">
         <div class="title">기쁨에 빠진 Cooking</div>
-        <div class="list">
+        <div class="list2">
           <img src="./assets/img_sumnail/sn-cooking-1.jpg" />
           <img src="./assets/img_sumnail/sn-cooking-2.jpg" />
           <img src="./assets/img_sumnail/sn-cooking-3.jpg" />
@@ -79,9 +119,13 @@
     <!-- FOOTER -->
     <footer>
       <nav>
-        <div onclick="CookieFuncList.goHome('PAGE')">홈</div>
+        <div>홈</div>
         <div>스토리</div>
-        <div class="nav_center">
+        <div
+          class="nav_center"
+          title="홈"
+          onclick="CookieFuncList.goHome('PAGE')"
+        >
           <span class="nav_center_1"></span>
           <span class="nav_center_2"></span>
           <span class="nav_center_3"></span>

@@ -9,6 +9,10 @@
   --color-font-02: rgb(70 70 70);
   --main-height: calc(100vh - 170px);
   --bgcolor-btn-hover-01: bisque;
+  /* image */
+  --img-desc-price-color: rgb(249 114 114);
+  --img-desc-short-color: rgb(157 157 157);
+  --img-desc-delivery-color: rgb(99 197 107);
 }
 
 /* ---------------
@@ -98,19 +102,64 @@ main {
 .menu-section > .list {
   display: flex;
   overflow-y: hidden;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
-.menu-section > .list > img {
+.menu-section > .list > .img-layout {
+  width: 120px;
+  height: 190px;
+  margin: 5px 10px 5px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* 이미지1 */
+.menu-section > .list > .img-layout > img {
   width: 120px;
   height: 120px;
-  border-radius: 6px;
-  margin: 10px 10px 10px 0px;
+  border-radius: 12px;
   object-fit: cover;
-  object-position: left; /* center */
+  object-position: left;
   cursor: pointer;
 }
+/* image title */
+.menu-section > .list > .img-layout > .img-title {
+  font-size: 13px;
+}
 
+/* image description */
+.menu-section > .list > .img-layout > .img-desc {
+  .img-price {
+    color: var(--img-desc-price-color);
+    font-size: 12px;
+  }
+  .img-shortdesc {
+    color: var(--img-desc-short-color);
+    font-size: 12px;
+  }
+}
+
+/* image description */
+.menu-section > .list > .img-layout > .img-delivery {
+  font-size: 12px;
+  color: var(--img-desc-delivery-color);
+}
+
+.menu-section > .list2 {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.menu-section > .list2 > img {
+  width: 120px;
+  height: 120px;
+  margin: 5px 10px 10px 0px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: left;
+  cursor: pointer;
+}
 /* --------------------------------
               FOOTER
  ---------------------------------- */
@@ -207,6 +256,16 @@ footer nav .nav_center .nav_center_1 {
   background-color: burlywood;
   position: absolute;
   animation: ani_nav_center 2.5s infinite linear;
+  z-index: 2;
+}
+/* footer nav center */
+.nav_center_3 {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: bisque;
+  position: absolute;
+  z-index: 2;
 }
 
 @keyframes ani_nav_center {
@@ -215,7 +274,7 @@ footer nav .nav_center .nav_center_1 {
     opacity: 0;
   }
   50% {
-    transform: scale(1.8);
+    transform: scale(1.7);
     opacity: 1;
   }
   100% {
