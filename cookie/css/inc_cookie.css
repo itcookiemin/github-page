@@ -11,8 +11,8 @@
   --bgcolor-btn-hover-01: bisque;
   /* image */
   --img-desc-price-color: rgb(249 114 114);
-  --img-desc-short-color: rgb(157 157 157);
-  --img-desc-delivery-color: rgb(99 197 107);
+  --img-desc-short-color: rgb(112, 112, 112);
+  --img-desc-delivery-color: rgb(21, 95, 192);
 }
 
 /* ---------------
@@ -127,16 +127,17 @@ main {
   font-size: 13px;
 }
 
-/* image description */
-.menu-section > .list > .img-layout > .img-desc {
-  .img-price {
-    color: var(--img-desc-price-color);
-    font-size: 12px;
-  }
-  .img-shortdesc {
-    color: var(--img-desc-short-color);
-    font-size: 12px;
-  }
+/* image description 
+.menu-section > .list > .img-layout > .img-desc {}
+*/
+
+.img-price {
+  color: var(--img-desc-price-color);
+  font-size: 12px;
+}
+.img-shortdesc {
+  color: var(--img-desc-short-color);
+  font-size: 12px;
 }
 
 /* image description */
