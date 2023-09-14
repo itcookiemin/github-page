@@ -113,10 +113,10 @@ main {
     FOOTER
  --------------- */
 footer {
-  /* position: absolute;
-  top: calc(100vh - 50px); */
-  position: fixed;
-  bottom: 0px;
+  position: absolute;
+  top: calc(100vh - 50px);
+  /* position: fixed;
+  bottom: 0px; */
   display: flex;
   justify-content: center;
   align-items: center;

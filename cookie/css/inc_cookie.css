@@ -90,10 +90,6 @@ main {
   border: 1px solid darkslategray;
 }
 
-/* .menu-section:last-of-type {
-  margin-bottom: 50px;
-} */
-
 .menu-section > .title {
   position: relative;
   padding-top: 5px;
@@ -131,10 +127,6 @@ main {
   font-size: 13px;
 }
 
-/* image description 
-.menu-section > .list > .img-layout > .img-desc {}
-*/
-
 .img-price {
   color: var(--img-desc-price-color);
   font-size: 12px;
@@ -171,11 +163,6 @@ main {
 footer {
   position: absolute;
   top: calc(100vh - 50px);
-  /* position: sticky;
-  top: calc(100vh - 50px); */
-  /* position: fixed; */
-  /* bottom: 0px; */
-  /* top: calc(100vh - 50px); */
   display: flex;
   justify-content: center;
   align-items: center;
