@@ -167,8 +167,8 @@ main {
 footer {
   /* position: absolute;
   top: calc(100vh - 50px); */
-  position: fixed;
-  bottom: 0px + 50px;
+  position: sticky;
+  bottom: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
