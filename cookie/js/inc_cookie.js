@@ -14,3 +14,22 @@ const CookieFuncList = {
     window.location.href = _url_index;
   },
 };
+
+function init() {
+  scrollTopBtn();
+}
+
+function scrollTopBtn() {
+  const scrBtn = document.querySelector(".icon-top");
+
+  scrBtn.addEventListener("click", function (e) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  init();
+});

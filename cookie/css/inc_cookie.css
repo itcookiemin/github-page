@@ -13,6 +13,7 @@
   --img-desc-price-color: rgb(249 114 114);
   --img-desc-short-color: rgb(112, 112, 112);
   --img-desc-delivery-color: rgb(21, 95, 192);
+  --top-move-color: rgba(127, 255, 212, 0.637);
 }
 
 /* ---------------
@@ -263,6 +264,23 @@ footer nav .nav_center .nav_center_1 {
   background-color: bisque;
   position: absolute;
   z-index: 2;
+}
+
+/*  ===========================
+    TOP
+    =========================== */
+.icon-top {
+  display: inline;
+  flex-direction: column;
+  position: fixed;
+  bottom: 55px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: var(--top-move-color);
+  z-index: 100;
+  font-size: 14px;
+  cursor: pointer;
+  right: 20px;
 }
 
 @keyframes ani_nav_center {
