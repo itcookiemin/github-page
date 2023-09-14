@@ -174,7 +174,8 @@ footer {
   /* position: sticky;
   top: calc(100vh - 50px); */
   position: fixed;
-  bottom: 0px;
+  /* bottom: 0px; */
+  top: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
