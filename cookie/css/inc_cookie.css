@@ -90,9 +90,9 @@ main {
   border: 1px solid darkslategray;
 }
 
-.menu-section:last-of-type {
+/* .menu-section:last-of-type {
   margin-bottom: 50px;
-}
+} */
 
 .menu-section > .title {
   position: relative;
@@ -169,13 +169,13 @@ main {
               FOOTER
  ---------------------------------- */
 footer {
-  /* position: absolute;
-  top: calc(100vh - 50px); */
+  position: absolute;
+  top: calc(100vh - 50px);
   /* position: sticky;
   top: calc(100vh - 50px); */
-  position: fixed;
+  /* position: fixed; */
   /* bottom: 0px; */
-  top: calc(100vh - 50px);
+  /* top: calc(100vh - 50px); */
   display: flex;
   justify-content: center;
   align-items: center;
