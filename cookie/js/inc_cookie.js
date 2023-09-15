@@ -22,7 +22,7 @@ function init() {
 function scrollTopBtn() {
   const scrBtn = document.querySelector(".icon-top");
   // const footer = document.querySelector(".footer");
-  // const wrap = document.querySelector(".main-wrap");
+  // const wrap = document.querySelector(".wrap");
   // var options = {
   //   rootMargin: "0px 0px -16px 0px",
   //   threshold: 0,
@@ -44,24 +44,24 @@ function scrollTopBtn() {
   //     }
   //   });
   // }, options);
-  // window.addEventListener("scroll", function (e) {
-  //   if (window.scrollY > 0) {
-  //     // io.observe(footer);
-  //     scrBtn.style.display = "block";
-  //     setTimeout(() => {
-  //       scrBtn.style.opacity = "1";
-  //     }, 10);
-  //   } else {
-  //     scrBtn.style.opacity = "0";
-  //     setTimeout(() => {
-  //       scrBtn.style.display = "none";
-  //       // io.unobserve(footer);
-  //     }, 230);
-  //   }
-  // });
+  window.addEventListener("scroll", function (e) {
+    if (window.scrollY > 0) {
+      // io.observe(footer);
+      scrBtn.style.display = "block";
+      setTimeout(() => {
+        scrBtn.style.opacity = "1";
+      }, 10);
+    } else {
+      scrBtn.style.opacity = "0";
+      setTimeout(() => {
+        scrBtn.style.display = "none";
+        // io.unobserve(footer);
+      }, 230);
+    }
+  });
   scrBtn.addEventListener("click", function (e) {
     window.scrollTo({
-      top: 60,
+      top: 0,
       behavior: "smooth",
     });
   });
