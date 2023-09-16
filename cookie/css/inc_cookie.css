@@ -99,11 +99,10 @@
   --------------- */
 .menu-section {
   position: relative;
-  margin: 5dvh 10px 40px 10px;
+  margin: 50px 10px 20px 10px;
   background-color: var(--bgcolor-edge-01);
   border-radius: 12px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   border: 1px solid darkslategray;
 }
 
@@ -115,6 +114,7 @@
   font-size: 18px;
   /* font-weight: bold; */
   color: var(--color-font-01);
+  font-weight: bold;
 }
 
 .menu-section > .list {
@@ -126,7 +126,8 @@
 .menu-section > .list > .img-layout {
   width: 120px;
   min-height: 190px;
-  margin: 5px 10px 5px 0px;
+  margin: 0px;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
