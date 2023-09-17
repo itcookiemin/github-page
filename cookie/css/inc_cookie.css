@@ -110,12 +110,12 @@
 .menu-section > .title {
   position: absolute;
   top: -36px;
+  left: 0px;
   padding-top: 5px;
   padding-left: 0px;
   font-size: 18px;
-  /* font-weight: bold; */
-  color: var(--color-font-01);
   font-weight: bold;
+  color: var(--color-font-01);
 }
 
 .menu-section > .list {
@@ -200,7 +200,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   /* border: 1px solid rgb(255, 247, 209);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; */
