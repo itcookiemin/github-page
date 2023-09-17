@@ -22,6 +22,8 @@ const MinsMain = {
       _url_sub_main = "./menu/menu-hamburger.html";
     } else if (movePage === "COOKIE") {
       _url_sub_main = "./cookie/cookie-main.html";
+    } else if (movePage === "MODAL") {
+      _url_sub_main = "./modal/modal-main.html";
     } else {
       _url_sub_main = "";
     }

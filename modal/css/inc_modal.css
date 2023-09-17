@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Noto";
+  font-size: 16px;
+}
+
+.header {
+  padding: 20px;
+}
+
+/* header mdn link list */
+.header .mdn-link-1 {
+  padding: 20px;
+  border: 1px solid sienna;
+}
+
+.header .mdn-link-1 ul {
+  padding-left: 30px;
+}
+.header .mdn-link-1 ul li:hover {
+  text-decoration: underline;
+}
+
+/* button list */
+.content {
+  padding: 10px;
+}
+.content button {
+  margin: 10px;
+}
