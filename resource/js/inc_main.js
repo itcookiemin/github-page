@@ -18,8 +18,10 @@ const MinsMain = {
     var _url_sub_main = "";
     if (movePage === "LOADING") {
       _url_sub_main = "./loading/loading_main.html";
-    } else if (movePage === "HAMBURGER") {
-      _url_sub_main = "./menu/menu-hamburger.html";
+    } else if (movePage === "HAMBURGER1") {
+      _url_sub_main = "./menu/hamburger1/hamburger1.html";
+    } else if (movePage === "HAMBURGER2") {
+      _url_sub_main = "./menu/hamburger2/hamburger2.html";
     } else if (movePage === "COOKIE") {
       _url_sub_main = "./cookie/cookie-main.html";
     } else if (movePage === "MODAL") {
