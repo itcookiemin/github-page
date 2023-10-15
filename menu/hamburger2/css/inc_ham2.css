@@ -2,17 +2,32 @@
 
 :root {
   --bgcolor-body: #232323;
-  --color-all: #cdcdcd;
+  --color-body: #cdcdcd;
+  --color-text-alink: #232323;
+  --color-text-hover: tomato;
+  --bgcolor-hamburger: #cdcdcd;
+  --bgcolor-hamburger-x: #232323;
+  --bgcolor-span: #232323;
+  --bgcolor-menu: #ededed;
+}
+
+* {
+  /* border: 1px solid #ffffff; */
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background: var(--bgcolor-body);
-  color: var(--color-all);
+  background-color: var(--bgcolor-body);
+  color: var(--color-body);
+  /* border: 1px solid #ffffff; */
 }
 
+/* ----------------------
+  설계
+    1. 햄버거메뉴는 div[id=menuToggle] 로만 한다.
+  ---------------------- */
 #menuToggle {
   display: block;
   position: relative;
@@ -21,19 +36,22 @@ body {
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
+  width: 50px; /* x scroll 방비 */
+  /* border: 1px solid blue; */
 }
 
 #menuToggle a {
   text-decoration: none;
-  color: var(--color-all);
+  color: var(--color-text-alink);
+
   transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
-  color: tomato;
+  color: var(--color-text-hover);
 }
 
-#menuToggle input {
+#menuToggle input[type="checkbox"] {
   display: block;
   width: 40px;
   height: 32px;
@@ -46,4 +64,87 @@ body {
   z-index: 2; /* and place it over the hamburger */
 
   -webkit-touch-callout: none;
+}
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: var(--bgcolor-hamburger);
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  /* transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 1s ease; */
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+/* ----------------------
+  햄버거메뉴 체크된 경우 -> X 로 표현
+  span[1] rotate
+*/
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background-color: var(--bgcolor-hamburger-x);
+}
+
+/* span[3] 투명 */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* span[1] 투명 */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* ----------------------
+  Hamburger Menu Content
+  ---------------------- */
+#menu {
+  position: absolute;
+  width: 300px;
+  /* height: 100vh; */
+  /* border: 1px solid red; */
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background-color: var(--bgcolor-menu);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  /* Left to Right Animation */
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
 }
