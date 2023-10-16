@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM practice</title>
+    <!-- CSS -->
+    <style>
+      #btn-mins-home {
+        color: cadetblue;
+        font-weight: bold;
+        width: 100px;
+        padding: 10px;
+        border: 1px solid #ffffff;
+        text-align: center;
+      }
+
+      #btn-mins-home:hover {
+        cursor: pointer;
+        width: 100px;
+        border: 1px solid cadetblue;
+        padding: 10px;
+      }
+    </style>
     <!-- Javacript Resource -->
     <script src="../resource/js/inc_main.js"></script>
+    <!-- Event 등록시 꼭 window.onload 해야 함 -->
+    <script defer>
+      window.onload = () => {
+        const btnMinsHome = document.getElementById("btn-mins-home");
+        addEvent(
+          btnMinsHome,
+          "click",
+          (e) => {
+            MinsMain.goHome("PAGE");
+          },
+          false
+        );
+      };
+    </script>
   </head>
   <body>
-    구현 중
+    <div id="btn-mins-home">HOME</div>
+
+    <p>구현 중</p>
   </body>
 </html>
