@@ -1,3 +1,17 @@
+const MinsCommon = {
+  addEvent: (elementID, eventName, functionContent, isCapture) => {
+    if (window.addEventListener) {
+      //Edge, Chrome, Safari
+      elementID.addEventListener(eventName, functionContent, isCapture);
+    } else if (window.attachEvent) {
+      //IE Mode 10 이하
+      elementID.attachEvent("on" + eventName, functionContent);
+    } else {
+      elementID["on" + eventName] = functionContent;
+    }
+  },
+};
+
 /*
 //Element Event Handler 등록 방법
 1. <body>
@@ -13,7 +27,6 @@
 //Get Event Handler
 // let btnHamgerBox = document.getElementById("btn-hambuger-box");
 // btnHamgerBox.addEventListener("click", HamburgerMenu.moveLeftMenu);
-
 
 // </html> 아래 작성
 // window.onload(() => {
