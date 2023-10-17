@@ -13,7 +13,7 @@
   --footer: rgb(75 114 137);
   --bgcolor-hambox: white;
   --bgcolor-hambox-border: rgb(183 183 183);
-  --bgcolor-line-3: rgb(129 129 129);
+  --bgcolor-line-3: rgb(73, 73, 73);
   --bgcolor-line-3-hover: white;
   /* --bgcolor-line-2: white; */
 }
@@ -64,23 +64,56 @@ nav > .hambuger-box > span {
   width: 70%;
   height: 2px;
   border-radius: 10px;
+  /* animation smoth 적용 */
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-nav > .hambuger-box > span:nth-of-type(odd) {
+/* nav > .hambuger-box > span:nth-of-type(odd) {
   background-color: var(--bgcolor-line-3);
-}
+} */
 
 nav > .hambuger-box > span:nth-of-type(even) {
   /* background-color: var(--bgcolor-line-2); */
   background-color: var(--home);
 }
 
-nav > .hambuger-box:hover > span:nth-of-type(odd) {
+/* nav > .hambuger-box:hover > span:nth-of-type(odd) {
   background-color: var(--bgcolor-line-3-hover);
+} */
+
+nav > .hambuger-box > span:first-child {
+  transform-origin: 0% 0%;
+  background-color: var(--bgcolor-line-3);
 }
 
+nav > .hambuger-box > span:nth-child(3) {
+  background-color: var(--bgcolor-line-3);
+}
+
+nav > .hambuger-box > span:nth-last-child(1) {
+  transform-origin: 0% 100%;
+  background-color: var(--bgcolor-line-3);
+}
+
+/* START hamburger rotate = make X ----------------- */
+.hambuger-x1 {
+  opacity: 1;
+  transform: rotate(45deg) translate(4px, -2px);
+  /* transform: rotate(45deg) translate(10px, 10px); */
+}
+.hambuger-x2 {
+  opacity: 0;
+}
+.hambuger-x3 {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0px, 6px);
+
+  /* transform: rotate(-45deg) translate(10px, -10px); */
+}
+/* END hamburger rotate = make X ----------------- */
+
 /* ------------------------
-   aside menu
+  aside menu
  ---------------------------*/
 #id-left-menu {
   display: block;
@@ -92,15 +125,31 @@ nav > .hambuger-box:hover > span:nth-of-type(odd) {
   background-color: bisque;
 }
 
-.move {
-  /* display: block; */
-  /* display: relative; */
-  /* transform: translateX(300px) 1s linear infinite; */
-  transform: translateX(300px);
-  background-color: rgb(233, 148, 44);
-
-  /* transform-origin: 0% 0%;
+.left-menu-move {
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.left-menu-close {
   transform: translate(-100%, 0);
-  /* Left to Right Animation */
-  /* transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);  */
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.hamburger-x1-close {
+  transform-origin: 0% 0%;
+}
+.hamburger-x2-close {
+  /* opacity: 1; */
+  animation: hamburger-ani 1s ease normal;
+}
+.hamburger-x3-close {
+  transform-origin: 0% 100%;
+}
+
+@keyframes hamburger-ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
