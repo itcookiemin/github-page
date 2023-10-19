@@ -2,7 +2,7 @@
 
 * {
   padding: 0px;
-  margin: 0px; /* 수정 */
+  margin: 0px;
   box-shadow: border-box;
 }
 
@@ -15,6 +15,7 @@
   --bgcolor-hambox-border: rgb(183 183 183);
   --bgcolor-line-3: rgb(73, 73, 73);
   --bgcolor-line-3-hover: white;
+  --bgcolor-aside: rgb(255, 241, 224);
   /* --bgcolor-line-2: white; */
 }
 
@@ -59,10 +60,10 @@ nav > .hambuger-box {
 }
 
 nav > .hambuger-box > span {
-  padding: 2.5px;
+  padding: 2px;
   display: block;
-  width: 70%;
-  height: 2px;
+  width: 50%;
+  height: 0px;
   border-radius: 10px;
   /* animation smoth 적용 */
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -116,16 +117,18 @@ nav > .hambuger-box > span:nth-last-child(1) {
   aside menu
  ---------------------------*/
 #id-left-menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  width: 300px;
+  width: 100%;
   height: calc(100vh - 60px);
-  left: -300px;
+  /* left: 0px;  사이드 메뉴내용 그리고 싶을 때*/
+  left: -100%;
   top: 60px;
-  background-color: bisque;
+  background-color: var(--bgcolor-aside);
 }
 
-.left-menu-move {
+.left-menu-open {
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -134,16 +137,68 @@ nav > .hambuger-box > span:nth-last-child(1) {
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
+
+/* 상단메뉴 */
+#id-left-menu > #leftMenuTop {
+  width: calc(100% - 20px);
+  height: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#id-left-menu > #leftMenuTop > div {
+  display: flex;
+  flex-direction: row;
+}
+
+#id-left-menu > #leftMenuTop > div > div:nth-child(1) {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+#id-left-menu > #leftMenuTop > div > div:nth-child(2) {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* default X 버튼 생성 */
+#id-left-menu > #leftMenuTop > div > div:nth-child(2) > span {
+  padding: 1px;
+  display: inline;
+  position: absolute;
+  width: 20px;
+  height: 0px;
+  top: 10px;
+  background-color: black;
+}
+/* X 버튼 회전 */
+#id-left-menu > #leftMenuTop > div > div:nth-child(2) > span:nth-child(1) {
+  transform: rotate(45deg);
+}
+#id-left-menu > #leftMenuTop > div > div:nth-child(2) > span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+#id-left-menu > #leftMenuContent {
+  width: calc(100% - 20px);
+  height: 200px;
+  padding: 10px;
+}
+
+/* 햄버거 메뉴 close 실행 animation
 .hamburger-x1-close {
   transform-origin: 0% 0%;
 }
 .hamburger-x2-close {
-  /* opacity: 1; */
   animation: hamburger-ani 1s ease normal;
 }
 .hamburger-x3-close {
   transform-origin: 0% 100%;
-}
+} 
 
 @keyframes hamburger-ani {
   0% {
@@ -153,3 +208,4 @@ nav > .hambuger-box > span:nth-last-child(1) {
     opacity: 1;
   }
 }
+*/
