@@ -6,7 +6,7 @@
     <title>DOM practice</title>
     <!-- CSS -->
     <style>
-      #btn-mins-home {
+      #btnMinsHome {
         color: cadetblue;
         font-weight: bold;
         width: 100px;
@@ -15,33 +15,118 @@
         text-align: center;
       }
 
-      #btn-mins-home:hover {
+      #btnMinsHome:hover {
         cursor: pointer;
         width: 100px;
         border: 1px solid cadetblue;
         padding: 10px;
       }
+
+      #formMins > table {
+        border: 1px solid black;
+      }
     </style>
     <!-- Javacript Resource -->
     <script src="../resource/js/inc_main.js"></script>
     <!-- Event 등록시 꼭 window.onload 해야 함 -->
+    <script>
+      let DomMain = {
+        checkDataList: () => {
+          //
+          const majorDataList = document.querySelector("#majorDataList");
+          let majorText = document.querySelector("#majorText");
+          majorText.value = majorDataList.value;
+          //
+          const fruitDataList = document.getElementById("fruitDataList");
+          let fruitText = document.querySelector("input[name=fruitText]");
+          fruitText.value = fruitDataList.value;
+        },
+        //init 안되네 ㅡㅡ
+        init: () => {
+          document.querySelector("#majorList").value = "Select";
+          document.getElementById("fruitList").value = "Select";
+        },
+      };
+    </script>
     <script defer>
       window.onload = () => {
-        const btnMinsHome = document.getElementById("btn-mins-home");
+        //버튼 등록
+        //  HOME, 폼확인
+        const el_BtnMinsHome = document.getElementById("btnMinsHome");
         addEvent(
-          btnMinsHome,
+          el_BtnMinsHome,
           "click",
           (e) => {
             MinsMain.goHome("PAGE");
           },
           false
         );
+
+        //
+        const el_BtnCheck = document.getElementById("btnCheck");
+        addEvent(el_BtnCheck, "click", DomMain.checkDataList(), false);
+        const el_BtnReset = document.getElementById("btnReset");
+        addEvent(el_BtnReset, "click", DomMain.init(), false);
+
+        DomMain.init();
       };
     </script>
   </head>
   <body>
-    <div id="btn-mins-home">HOME</div>
+    <div id="btnMinsHome">HOME</div>
 
-    <p>구현 중</p>
+    <form action="*" method="post" id="formMins">
+      <h2>datalist tag</h2>
+      <label for="majorDataList">Choose a Major: </label>
+      <input type="text" name="majorDataList" id="majorDataList" list="majorList" /><br />
+      <label for="majorText">Choiced Major: </label><input type="text" name="majorText" id="majorText" /><br />
+      <datalist id="majorList">
+        <option value="Select"></option>
+        <option value="컴퓨터공학과 / Computer"></option>
+        <option value="영어영문과 / English"></option>
+        <option value="영어경영학과 / EnglishManagement"></option>
+        <option value="사회체육과 / SocialPhysical"></option></datalist
+      ><br />
+
+      <label for="fruitDataList"><span>Choose a Fruit: </span></label>
+      <input type="text" name="fruitDataList" id="fruitDataList" list="fruitList" /><br />
+      <label for="fruitText"><span>Choose a Major: </span></label>
+      <input type="text" name="fruitText" id="fruitText" /><br />
+      <datalist id="fruitList">
+        <option value="Select">Select</option>
+        <option value="애플">apple</option>
+        <option value="오렌지">orange</option>
+        <option value="망고">mango</option>
+        <option value="딸기">strawberry</option>
+        <option value="키위">kiwi</option>
+      </datalist>
+      <br />
+      <button type="button" id="btnCheck" style="width: 100px; height: 30px">확인</button>
+      <button type="button" id="btnReset" style="width: 100px; height: 30px">초기화</button>
+      <br />
+      <h2>select dropdown multiple tag</h2>
+      <!-- 드롭다운에서 보여줄 줄 수size(디폴트 전체)와 중복선택옵션(디폴트는 1개 선택) -->
+      <select size="10" multiple style="width: 200px">
+        <!-- 하나의 optgroup 안에 option들을 넣는다. -->
+        <optgroup label="Coffee">
+          <!-- <option label="옵션 제목" value="양식값">Americano</option> 
+      라벨과 밸류가 생략된다면, option태그 안의 텍스트가 각각 라벨과 밸류값으로 자동 처리된다. -->
+          <option>Americano</option>
+          <option>Caffe Mocha</option>
+          <option label="Cappuccino" value="Cappuccino"></option>
+        </optgroup>
+        <!-- disabled 비활성 -->
+        <optgroup label="Latte" disabled>
+          <option>Caffe Latte</option>
+          <option>Vanilla Latte</option>
+        </optgroup>
+        <optgroup label="Smoothie">
+          <option>Plain</option>
+          <option>Strawberry</option>
+          <option>Banana</option>
+          <option>Mango</option>
+        </optgroup>
+      </select>
+    </form>
   </body>
 </html>
